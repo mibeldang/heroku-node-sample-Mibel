@@ -1,0 +1,91 @@
+hr{
+height: 10px;
+border: 1;
+box-shadow: inset 0 9px 9px -3px #10c2aa;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+-ms-border-radius: 5px;
+-o-border-radius: 5px;
+border-radius: 2px;
+}
+.card{
+  background:   #c2f0e8
+}
+#message{
+  width:95%; 
+  height: 40px; 
+  border: solid black; 
+  box-shadow: 5px 5px 5px 5px rgb(68, 64, 64);
+  border-radius:10px;
+}
+
+#btnMessage{
+  border: solid black; 
+  box-shadow: 5px 5px 5px 5px rgb(68, 64, 64);
+  height: 40px;
+}
+
+#username{
+  border-radius:25px;
+}
+
+#container{
+  border-radius:25px;
+}
+
+#save{
+  border-radius:25px;
+}
+
+ #ownMessage{
+    text-align:right;
+    padding: 3px;
+    margin-left: 50%;
+  }
+
+  #ownMessageTime{
+    font-size: 10px;
+    text-align:right;
+    margin-left: 50%;
+    margin-top: -6%;
+  }
+
+  #othersMessage{
+    text-align:left;
+    padding:3px;
+    margin-right: 50%;
+  }
+
+  #otherMessageTime{
+    font-size: 10px;
+    text-align:left;
+    margin-right: 50%;
+    margin-top: -6%;
+  }
+
+  #inbox{
+    height: 450px;
+    padding: 5px;
+    overflow: auto;
+    border-radius:20px;
+  }
+
+  #chat{
+    width:50%;
+    float: right;
+    margin-right: 15%;
+    margin-top: -24%;
+    border-radius: 15px;
+    border: solid black; 
+    box-shadow: 5px 5px 5px 5px rgb(68, 64, 64)
+  }
+
+  #myUser{
+    background-color: #c2f0e8; 
+    overflow-y: scroll; 
+    height: 300px; 
+    border: solid black; 
+    box-shadow: 5px 5px 5px 5px rgb(68, 64, 64);
+    border-radius: 15px;
+  }
+

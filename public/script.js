@@ -3,7 +3,7 @@
 var myName = "";
 var users = [""];
 $(document).ready(function () {
-  var socket = io();
+  var socket = io.connect('http://localhost:3000')
   socket.emit("request_user", "REQUEST");
   var message = $("#message");
   var username = $("#username");
@@ -32,7 +32,6 @@ $(document).ready(function () {
   })
 
   socket.on('log_in', function (user) {
-    console.log(user )
     if (!users.includes(user)) {
       users.push(user);
       $('#users').append('<p> 🔵 <i>' + user + '</p>');
