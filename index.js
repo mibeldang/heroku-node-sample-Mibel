@@ -29,9 +29,6 @@ http.listen(port, function () {
 io.on('connection', (socket) => {
   console.log('New user connected')
 
-  //default username
-  socket.username = "Anonymous"
-
   //listen on change_username
   socket.on('change_username', (data) => {
     socket.username = data.username
@@ -56,5 +53,9 @@ io.on('connection', (socket) => {
   socket.on('typing', (data) => {
     socket.broadcast.emit('typing', data);
   })
+
+  socket.on('disconnect' , () => {
+    socket.broadcast.emit('user left', socket.username);
+  });
 
 })

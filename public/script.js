@@ -78,4 +78,11 @@ $(document).ready(function () {
       feedback.html('');
     }, 2000);
   })
+
+  socket.on('user left', (data) => {
+    if (data in users) {
+      users[data].remove();
+      
+    }
+  })
 });
