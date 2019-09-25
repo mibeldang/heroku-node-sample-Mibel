@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" const="text/html;charset=UTF-8" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js" integrity="sha256-H9jAz//QLkDOy/nzE9G4aYijQtkLt9FvGmdUTwBk6gs="
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title>My Chat</title>
+</head>
+
+<body style="background-color: #c2f0e8">
+  <div class="jumbotron jumbotron-fluid" style="background-color:#10c2aa;"><br>
+    <center>
+      <div class="container" >
+        <h1 style="font-size:60px; font-family: Verdana "> <b>Mibel's Chat Web </b></h1>
+      </div><br>
+    </center>
+  </div>
+
+  <center>
+    <div class="modal active" id="modal-id" style="background-color:#c2f0e8 ; margin-top:-10%;"><a href="#close" class="modal-overlay"
+        aria-label="Close"></a>
+      <div class="modal-container"  id= " container" style="width: 40%; height:45%;  background-color: #10c2aa ">
+        <div class="modal-header">
+          <div>
+            <img src="icon.png" width="200px;" height="auto">
+          </div>
+          <div class="modal-title h4" style="color:black; font-family:'Times New Roman', Times, serif "><b> Create Your Username</b></div>
+        </div><br>
+        <div class="modal-body">
+          <div class="content">
+            <div id="change_username" class="form-group">
+              <input id="username" type="text" class="form-input" placeholder="Username " /><br><br>
+              <button id="btnUsername"  id="save" class="btn btn-primary" type="button"><b>Save Username</b></button>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+  </center>
+
+  <div class="container" style="margin-top: 5%;">
+
+    <div class="col-sm-4" style="width:20%; margin-left: 15%; margin-top: -2%; border-radius: 25px;">
+      <div class="card" id="myUser">
+        <center>
+          <header>
+            <h2>Active Users</h2>
+            <hr>
+          </header>
+        </center>
+        <span id="users"></span>
+      </div>
+    </div>
+
+
+    <div class="col-sm-8" id="chat">
+      <div class="card" style="border-radius: 25px;">
+        <center>
+          <img src="icon.png " width="150px;" height="auto" >
+          <h1 style="color:black">Chatbox</h1>
+          <hr><br>
+        </center>
+        <section id="inbox"></section>
+        <span id="feedback"></span>
+      </div>
+      <div class="input-group">
+        <input id="message" type="text" class="form-control" placeholder="Some text" autocomplete="off">
+        <div class="input-group-prepend">
+          <button id="btnMessage" class="btn btn-primary" type="button">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
